@@ -12,12 +12,16 @@ day1=day-1
 print(mon)
 print(day1)
 if mon<=9:
-    if day1<=9:
+    fname = 'cowrie.json.'+str(year)+'-0'+str(mon)+'-'+str(day1)
+    if day<=9:
         fname = 'cowrie.json.'+str(year)+'-0'+str(mon)+'-0'+str(day1)
     else:
         fname = 'cowrie.json.'+str(year)+'-0'+str(mon)+'-'+str(day1)
-else:
-    fname = 'cowrie.json.'+str(year)+'-'+str(mon)+'-'+str(day1)
+elif mon>=9:
+    if day<=9:
+        fname = 'cowrie.json.'+str(year)+'-'+str(mon)+'-0'+str(day1)
+    else:
+        fname = 'cowrie.json.'+str(year)+'-'+str(mon)+'-'+str(day1)
 access = pd.read_json(fname,lines=True)
 df=pd.DataFrame(access)
 df['timestamp']=pd.to_datetime(df['timestamp'])
