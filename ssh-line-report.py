@@ -1,4 +1,4 @@
-#2020-12-13 cowrieログ分析について
+#SSHのハニーポットアラートプログラム
 import pandas as pd
 import datetime
 import gzip
