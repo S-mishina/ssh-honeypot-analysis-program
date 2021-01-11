@@ -90,7 +90,7 @@ print(df5['destfile'])
 #===========================ブログ書き込み===========================================
 post = WordPressPost()
 post.post_status = which
-post.title = "<font size='1'>"+str(year)+'-'+str(mon)+'-'+str(day)+"</font>"
+post.title =str(year)+'-'+str(mon)+'-'+str(day)
 post.content = "<h2>ログインに失敗したID</h2>"+"<br>"+str(noid)+"<br><br>"+"<h2>ログインに成功したPASS</h2>"+"<br>"+str(password)+"<br><br>"+"<h2>ログインに失敗したPASS</h2>"+"<br>"+str(nopassword4)+"<br><br>"+"<h2>実行に成功したコマンド</h2>"+"<br>"+str(df3['input'])+"<br><br>"+"<h2>実行に失敗したコマンド</h2>"+"<br>"+str(df4['input'])+"<br><br>"+"<h2>ダウンロードしたファイル</h2>"+"<br>"+str(df5['destfile'])
 wp.call(NewPost(post))
 
