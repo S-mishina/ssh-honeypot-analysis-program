@@ -54,9 +54,6 @@ elif mon>=9:
     else:
         fname = 'cowrie.json.'+str(year)+'-'+str(mon)+'-'+str(day1)
 print(fname)
-
-fname = 'cowrie.json.'+str(year)+'-'+str(mon)+'-'+str(day)
-print(fname)
 access = pd.read_json(fname,lines=True)
 df=pd.DataFrame(access)
 df['timestamp']=pd.to_datetime(df['timestamp'])
